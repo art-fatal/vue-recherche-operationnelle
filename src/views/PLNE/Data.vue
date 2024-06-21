@@ -98,6 +98,18 @@ const submit = () => {
     </router-link>
     <Button label="Continuer" outlined class="w-50 p-3 text-xl" @click="submit"></Button>
   </div>
+  <Panel v-if="result">
+    <p class="text-center mt-8 mb-3">Resultat :</p>
+    <p class="text-left mt-8 mb-3">Max :{{ result.max }}</p>
+
+    <div class="flex flex-wrap gap-3 justify-around mt-5" v-for="row in result.tableau">
+      <InputGroup>
+        <InputGroupAddon>{{ row.variable }}</InputGroupAddon>
+        <InputGroupAddon v-for="col in row.row">{{ col }}</InputGroupAddon>
+      </InputGroup>
+    </div>
+  </Panel>
+
 </template>
 
 <style scoped>

@@ -4,7 +4,7 @@ export enum GoalEnum {
 }
 
 export enum OperatorEnum {
-    LOWER= "lt",
-    GREATER= "gt",
+    LOWER= "lte",
+    GREATER= "gte",
     EQUAL= "eq"
 }

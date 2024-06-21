@@ -26,6 +26,7 @@ export const usePLNEStore = defineStore('plne', () => {
     })
     watch(() => decision.value, (value) => {
         objectiveFunctionCoeff.value = Array(value).fill(1)
+        constrainstCoeff.value = Array.from({ length: constrainst.value }, () => Array.from({ length: decision.value + 1}, () => 1))
     })
 
     return {decision, constrainst, goal, objectiveFunctionCoeff, constrainstCoeff, contrainstOperator, setContrainstOperator}

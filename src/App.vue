@@ -17,7 +17,7 @@ const items = ref([
   },
   {
     label: 'PLNE',
-    link: 'plne'
+    link: 'plne_index'
   }
 ]);
 

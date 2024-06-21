@@ -16,6 +16,7 @@
     "loadash": "^1.0.0",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",
+    "primeicons": "^7.0.0",
     "primevue": "^3.52.0",
     "vis-network": "^9.1.9",
     "vue": "^3.4.21",

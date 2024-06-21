@@ -26,7 +26,24 @@ const router = createRouter({
     {
       path: '/plne',
       name: 'plne',
-      component: () => import('../views/PLNE.vue')
+      component: () => import('../views/PLNE.vue'),
+      children: [
+        {
+          path: '',
+          name: 'plne_index',
+          component: () => import('../views/PLNE/Index.vue')
+        },
+        {
+          path: 'data',
+          name: 'plne_data',
+          component: () => import('../views/PLNE/Data.vue')
+        },
+        {
+          path: 'result',
+          name: 'plne_result',
+          component: () => import('../views/PLNE/Result.vue')
+        },
+      ]
     }
   ]
 })

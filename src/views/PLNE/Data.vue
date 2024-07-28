@@ -45,7 +45,6 @@ type Constraint = {
 type Variable = {
   z: number;
   [key: string]: number | boolean;
-  int: boolean;
 };
 
 type Variables = {
@@ -60,8 +59,7 @@ function createVariables(arr: number[][], zVals: number[]): Variables {
   for (let i = 0; i < numVariables; i++) {
     const variableKey = `x${i + 1}`;
     const variable: Variable = {
-      z: zVals[i],
-      int: true
+      z: zVals[i]
     };
 
     for (let j = 0; j < numConstraints; j++) {
@@ -110,35 +108,39 @@ const submit = () => {
   };
 
 // Résolution du problème
+
   result.value = Solver.Solve(model);
+
+  console.log(model);
+  console.log(result.value);
   // result.value = calculate(goal.value, decision.value, constrainst.value, contrainstOperator.value, objectiveFunctionCoeff.value, constrainstCoeff.value)
 
   // router.push({ name: 'plne_result' })
 }
 
-onMounted(() => {
-  if (decision.value === 3 && constrainst.value === 3) {
-    objectiveFunctionCoeff.value[0] = 10
-    objectiveFunctionCoeff.value[1] = 14
-    objectiveFunctionCoeff.value[2] = 12
-
-    constrainstCoeff.value[0][0] = 1
-    constrainstCoeff.value[0][1] = 3
-    constrainstCoeff.value[0][2] = 2
-    constrainstCoeff.value[0][3] = 40
-
-    constrainstCoeff.value[1][0] = 3
-    constrainstCoeff.value[1][1] = 2
-    constrainstCoeff.value[1][2] = 1
-    constrainstCoeff.value[1][3] = 45
-
-    constrainstCoeff.value[2][0] = 1
-    constrainstCoeff.value[2][1] = 1
-    constrainstCoeff.value[2][2] = 4
-    constrainstCoeff.value[2][3] = 38
-  }
-
-})
+// onMounted(() => {
+//   if (decision.value === 3 && constrainst.value === 3) {
+//     objectiveFunctionCoeff.value[0] = 10
+//     objectiveFunctionCoeff.value[1] = 14
+//     objectiveFunctionCoeff.value[2] = 12
+//
+//     constrainstCoeff.value[0][0] = 1
+//     constrainstCoeff.value[0][1] = 3
+//     constrainstCoeff.value[0][2] = 2
+//     constrainstCoeff.value[0][3] = 40
+//
+//     constrainstCoeff.value[1][0] = 3
+//     constrainstCoeff.value[1][1] = 2
+//     constrainstCoeff.value[1][2] = 1
+//     constrainstCoeff.value[1][3] = 45
+//
+//     constrainstCoeff.value[2][0] = 1
+//     constrainstCoeff.value[2][1] = 1
+//     constrainstCoeff.value[2][2] = 4
+//     constrainstCoeff.value[2][3] = 38
+//   }
+//
+// })
 </script>
 
 <template>

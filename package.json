@@ -13,6 +13,8 @@
     "@heroicons/vue": "^2.1.4",
     "@tailwindcss/forms": "^0.5.7",
     "@viz-js/viz": "^3.6.0",
+    "fraction.js": "^4.3.7",
+    "javascript-lp-solver": "^0.4.24",
     "loadash": "^1.0.0",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",
@@ -20,7 +22,8 @@
     "primevue": "^3.52.0",
     "vis-network": "^9.1.9",
     "vue": "^3.4.21",
-    "vue-router": "4"
+    "vue-router": "4",
+    "yalps": "^0.5.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

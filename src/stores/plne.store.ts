@@ -13,6 +13,7 @@ export const usePLNEStore = defineStore('plne', () => {
     const objectiveFunctionCoeff = ref(Array(decision.value).fill(1))
     const constrainstCoeff = ref<Array<Array<number>>>()
     const contrainstOperator = ref(Array(constrainst.value).fill(OperatorEnum.LOWER))
+    const isInt = ref<boolean>(false)
 
     constrainstCoeff.value = Array.from({ length: constrainst.value }, () => Array.from({ length: decision.value + 1}, () => 1))
 
@@ -29,5 +30,5 @@ export const usePLNEStore = defineStore('plne', () => {
         constrainstCoeff.value = Array.from({ length: constrainst.value }, () => Array.from({ length: decision.value + 1}, () => 1))
     })
 
-    return {decision, constrainst, goal, objectiveFunctionCoeff, constrainstCoeff, contrainstOperator, setContrainstOperator}
+    return {decision, constrainst, goal, objectiveFunctionCoeff, constrainstCoeff, contrainstOperator, setContrainstOperator, isInt}
 })

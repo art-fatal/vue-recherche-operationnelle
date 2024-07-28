@@ -710,6 +710,11 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
+heap@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/heap/-/heap-0.2.7.tgz#1e6adf711d3f27ce35a81fe3b7bd576c2260a8fc"
+  integrity sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg==
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -759,6 +764,11 @@ jackspeak@^3.1.2:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
+
+javascript-lp-solver@^0.4.24:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/javascript-lp-solver/-/javascript-lp-solver-0.4.24.tgz#3bb5f8aa051f0bf04747e39130133a0f738f635c"
+  integrity sha512-5edoDKnMrt/u3M6GnZKDDIPxOyFOg+WrwDv8mjNiMC2DePhy2H9/FFQgf4ggywaXT1utvkxusJcjQUER72cZmA==
 
 jiti@^1.21.0:
   version "1.21.6"
@@ -1254,6 +1264,13 @@ wrap-ansi@^8.1.0:
     ansi-styles "^6.1.0"
     string-width "^5.0.1"
     strip-ansi "^7.0.1"
+
+yalps@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/yalps/-/yalps-0.5.6.tgz#3c8ec97c9b47af86e3aa1bd6cb0df872b896f12e"
+  integrity sha512-pqjmZGtEBAYuTR03G8SWVvR9vAyBBfSKup82CEJRx2Bta5j/1fRT29kwYdL2NaensQ5ugrYGLdHupNsYWPKGQg==
+  dependencies:
+    heap "^0.2.7"
 
 yaml@^2.3.4:
   version "2.4.5"
